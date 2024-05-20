@@ -3,10 +3,14 @@ module ErrorHandler
 
   ################### Custom Error Subclasses ####################
   class AuthenticationError < StandardError; end
+  class MissingToken < StandardError; end
+  class InvalidToken < StandardError; end
 
   included do
     ####################### Custom Handlers ########################
     rescue_from ErrorHandler::AuthenticationError, with: :unauthorized_request
+    rescue_from ErrorHandler::MissingToken, with: :unauthorized_request
+    rescue_from ErrorHandler::InvalidToken, with: :unauthorized_request
 
     # Catch record not found exception
     rescue_from ActiveRecord::RecordNotFound do |err|
