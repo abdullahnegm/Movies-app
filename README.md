@@ -13,3 +13,5 @@ Some extra stuff was implemented but is not required, to avoid making the test c
 
 
 a File named test.http is in the root directory of the app and contains the apis a long with request body example.
+
+NOTE: Reviews file may need to be modified by making user names match existing user names in the system
