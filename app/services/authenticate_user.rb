@@ -17,7 +17,7 @@ class AuthenticateUser
   # Authenticate the user with username if exists
   def user
     user = User.find_by_username(username)
-    return user if user.present?
+    return user if user.present? && user.authenticate(password)
     
     # raise Authentication error if credentials are invalid
     raise(ErrorHandler::AuthenticationError, 'You have either entered a wrong Username or password')
