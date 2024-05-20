@@ -6,8 +6,8 @@ class CreateJoinTableMoviesReviews < ActiveRecord::Migration[7.1]
       t.bigint :user_id
 
       t.index :movie_id
+      t.index :review_id
       t.index :user_id
-      t.index :actor_id
       
       t.timestamps
     end
