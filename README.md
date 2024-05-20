@@ -1,24 +1,15 @@
-# README
+To run the app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1 - bundle i
+2 - rails db:create db:migrate 
+3 - rails db:seeds  - this one optional (creates dummy data)
 
-Things you may want to cover:
+To run the import task on the provided CSVs
 
-* Ruby version
+1 - rails import:movies    ( for reviews csv )
+2 - rails import:reviews   ( for reviews csv )
 
-* System dependencies
+Some extra stuff was implemented but is not required, to avoid making the test complicated.
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+a File named test.http is in the root directory of the app and contains the apis a long with request body example.
