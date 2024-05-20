@@ -5,8 +5,11 @@ class CreateMovies < ActiveRecord::Migration[7.1]
       t.text :description
       t.integer :year
       t.string :director
+      t.text :actors, array: true, default: []
       t.string :filming_location
       t.string :country
+
+      t.index :actors
 
       t.timestamps
     end
